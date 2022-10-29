@@ -80,3 +80,28 @@ replace라는 함수를 알수있었다. 사실 위 와같은 답도 정답이�
 
 items()는 key,value값을 튜플로 묶어서 리스트형식으로 반환해준다.
 items()함수가 내가 코드를 작성한뒤 생각했던 방식이였다 같이 replace를 사용햇지만 for 문을 쓰고안쓰고 코드의 길이가 세배 이상 간결해졋다.
+
+
+7.
+``` python
+def solution(participant, completion):
+    answer = [x for x in participant if x not in completion]
+    return ','.join(answer)
+```
+첫 번쨰 시도 5번문제와 비슷하게 풀어보려했으나 일부는 검증과정에서 오류가났다
+이유는 동명이인의 참가자가 있을때 한명만 들어왔다면 participant에서 두명다 지워버리기 떄문이다 한개만 지워야되는데
+방법을 계속고민했다 set,sort,difference  차집합 등.. 그러나 문자열이라서 list형식이라는 이유로 계속 실패하다가 
+이번 문제의 카테고리가 해시인것을 보고 해시가 무엇이고 이문제에 어떻게 사용할지 찾았다.
+
+결국 해시이해도 못했고 원하는 답도 찾지 못했다.
+위에 시도해봤던 과정중 가장 근접했다고 생각했던것은 sort로  하나씩 비교하고 아닌것을 반환하자 해서 
+for 문을 돌리기시작했다
+``` python
+def solution(participant, completion):
+    participant.sort()
+    completion.sort()
+    for i in range(len(completion)):
+        if participant[i] != completion[i]:
+            return participant[i]
+    return participant[len(participant)-1]
+```
