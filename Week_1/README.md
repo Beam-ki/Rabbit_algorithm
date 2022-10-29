@@ -57,3 +57,26 @@ def solution(numbers):
 [x for x in b if x not in numbers] 에 대한 해석 -- 
 b를 x만큼 돌린것을 x에 담고 담은 x를 다시 numbers에 x만큼 돌려서 numbers에 포함되어있지 않는 값 x를 배열에 담아준다 가 맞나요? 
 
+
+
+6.숫자문자열과_영단어
+``` python 
+    def solution(s):
+        answer = 0
+        s = s.replace('zero', '0')
+        s = s.replace('one', '1')
+        s = s.replace('two', '2')
+        s = s.replace('three', '3')
+        s = s.replace('four', '4')
+        s = s.replace('five', '5')
+        s = s.replace('six', '6')
+        s = s.replace('seven', '7')
+        s = s.replace('eight', '8')
+        s = s.replace('nine', '9')
+        return int(s)
+```
+맨처음에는 for문을 돌려서 하나씩조건문을 거는방식으로 하려다가 너무 코드가 길어지고 난잡해질거같아서 문자열 변환이라고 구글링했던결과
+replace라는 함수를 알수있었다. 사실 위 와같은 답도 정답이긴하지만 프로그래밍상 더 좋은 방법이있을거같았다 (아마 ('','') 이부분을 for문으로 돌리면 한줄또는 두줄로 가능할지도?) 다른사람들의 코드를보니 relpace 라는 함수보다는 items()라는 함수를 딕셔너리형태로 깔끔하게 작성했다
+
+items()는 key,value값을 튜플로 묶어서 리스트형식으로 반환해준다.
+items()함수가 내가 코드를 작성한뒤 생각했던 방식이였다 같이 replace를 사용햇지만 for 문을 쓰고안쓰고 코드의 길이가 세배 이상 간결해졋다.
