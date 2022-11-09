@@ -104,4 +104,20 @@ def solution(participant, completion):
             return participant[i]
     return participant[len(participant)-1]
 ```
- 마지막테스트입니다
+ 
+8.약수의 갯수와 덧셈
+``` python
+def solution(left, right):
+    list=0
+    for a in range(left, right+1):
+        result=0
+        for b in range(1 ,a+1):
+            if a % b ==0:
+                result +=1
+        if result % 2 == 0:
+            list += a
+        else:
+            list -= a
+    return list
+```
+특정숫자 n에대하여 약수구하기,갯수구하기는 쉬웠는데 일정 범위를 지정하려고하니 조금 오래걸렸다 list += a 이부분도 계속 맞는지 헷갈렸고 result = 0 변수가 왜 for문안에서 들어가는지 모르겠다 for문 밖에서 지정하게되면 return값은 9가 나오게된다 왜?
