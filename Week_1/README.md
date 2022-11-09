@@ -104,3 +104,4 @@ def solution(participant, completion):
             return participant[i]
     return participant[len(participant)-1]
 ```
+ 마지막테스트입니다
