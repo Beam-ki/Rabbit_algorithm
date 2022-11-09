@@ -1,4 +1,4 @@
-1주차 문제 풀이
+1주차 문제 풀이A
 
 1.짝수와 홀수
 ``` python
@@ -104,3 +104,5 @@ def solution(participant, completion):
             return participant[i]
     return participant[len(participant)-1]
 ```
+
+
