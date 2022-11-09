@@ -104,4 +104,19 @@ def solution(participant, completion):
             return participant[i]
     return participant[len(participant)-1]
 ```
-cmd에서 추가 !
+
+
+
+
+
+        안녕하세요 ^^ 우분투에서 수정했습니다 !
+        안녕하세요 ^^ 우분투에서 수정했습니다 !
+        안녕하세요 ^^ 우분투에서 수정했습니다 !
+        안녕하세요 ^^ 우분투에서 수정했습니다 !
+        안녕하세요 ^^ 우분투에서 수정했습니다 !
+        안녕하세요 ^^ 우분투에서 수정했습니다 !
+        안녕하세요 ^^ 우분투에서 수정했습니다 !
+        안녕하세요 ^^ 우분투에서 수정했습니다 !
+        안녕하세요 ^^ 우분투에서 수정했습니다 !
+        안녕하세요 ^^ 우분투에서 수정했습니다 !
+sadasdssddfgnfisg;nrekaglnkdlf;nlsfz
