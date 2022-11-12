@@ -121,3 +121,19 @@ def solution(left, right):
     return list
 ```
 특정숫자 n에대하여 약수구하기,갯수구하기는 쉬웠는데 일정 범위를 지정하려고하니 조금 오래걸렸다 list += a 이부분도 계속 맞는지 헷갈렸고 result = 0 변수가 왜 for문안에서 들어가는지 모르겠다 for문 밖에서 지정하게되면 return값은 9가 나오게된다 왜?
+
+9.비밀지도
+```python
+def solution(n, arr1, arr2):
+    answer=[''] * n
+    for i in range(len(arr1)):
+        bin1 = bin(arr1[i])[2:].zfill(n)
+        bin2 = bin(arr2[i])[2:].zfill(n)
+        for j in range(n):
+            if bin1[j] == '0' and bin2[j] == '0':
+                answer[i] += ' '
+            else:
+                answer[i] += '#'
+    return answer
+```
+어렵다..

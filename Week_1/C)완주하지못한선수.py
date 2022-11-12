@@ -17,3 +17,6 @@ for i in range(len(b)):
 print(a[len(a)-1])
 
 
+
+# collections.Counters
+# 임포트 필요
