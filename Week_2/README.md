@@ -37,3 +37,22 @@ def solution(n):
 ```
 list안에다가 map()을이용해서 하나씩 분해해주고 append를 통해 하나씩 추가해주었다 그다음에 내림차순으로 정렬을 해야되는데
 오름차순은 sort고 내림차순은 reverse 니 reversed로 될줄알았는데 안됐다 sorted가 자동완성되길래 구글링해보니 sorted()안에 reverse=false가 있어서 내림차순으로 하고싶으면 reverse=True로 바꿔서 사용해야된다. 내림차순으로 정렬후에 join()함수를이용해서 합쳐주었다.
+https://velog.io/@qhsh866/Python-split-join-map-%EB%AC%B8%EC%9E%90%EC%97%B4-%EA%B4%80%EB%A0%A8-%ED%95%A8%EC%88%98-%EC%A0%95%EB%A6%AC
+
+4.나머지가 1이되는 수  찾기
+```python
+def solution(n):
+    answer=[]
+    for i in range(1,n):
+        if n % i ==1:
+            answer.append(i)
+    return answer[0]
+```
+나는 이렇게 풀었다. 단순 i 만 return 하게되면  i의 값이 여러개 나오게되어서 첫번째 요소만 return하게했다
+```python
+def solution(n):
+    for i in range(1,n):
+        if n % i ==1:
+            return i
+```
+그런데 이답도 맞는다고는 한다 이렇게되면 i의 값이 여러개 들어가서 틀린것이 아닌가?
