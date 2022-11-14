@@ -37,10 +37,14 @@ for i in range(len(arr1)):
         if bin1[j] == '0' and bin2[j] == '0':
             answer[i]+=' '
         else:
-            answer[j]+='#'
+            answer[i]+='#'
         print(answer)
     # return answer
 
 n=5
 arr1=[9, 20, 28, 18, 11]
 arr2=[30, 1, 21, 17, 28]
+A=bin(100)
+# [2:]
+
+print(A)
