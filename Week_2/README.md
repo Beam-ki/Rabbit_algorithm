@@ -95,3 +95,66 @@ def solution(d, budget):
 이후 for문을 돌려서 d[0] 번째~ i번쨰까지 budget을 차례대로 뺴주었다 answer에 팀수를 구하는거니 한번 뺼떄마다 answer 가 하나씩 늘어난다.
 반복하다가 budget이 d[i]보다 작아진다면 멈추고 answer를 리턴해준다  
 다른 사람이 쓴코드를 보니 어렵다..내가작성한코드가 가장 나은거같다
+
+7.k번쨰 수
+```python
+def solution(array, commands):
+    answer=[]
+    for i in commands:
+        A=array[i[0]-1:i[1]]
+        A.sort()
+        answer.append(A[i[2]-1])
+    return answer
+```
+array=[1, 5, 2, 6, 3, 7, 4]
+commands=[[2, 5, 3], [4, 4, 1], [1, 7, 3]]
+answer=[5, 6, 3]
+슬라이싱을 이용해서 풀었다. commands [a,b,c]는 a번쨰부터 b번쨰까지 잘라서 오름차순으로 정렬했을때  c번쨰 수를 answer에 담아주면된다.
+i는 첫번째 commands에있는 2-1:5번째까지 슬라이싱해서 A에 담아준뒤 sort이용해서 오름차순으로 정렬해준뒤 commands의 2번째 요소에서 1을뺸숫자를 answer에 담아주는것을 commands갯수만큼 반복한다. -1를 써준이유는 첫번쨰요소는 [0]이기때문에 해주었다.
+풀떄는 뭔가 신들린듯이 풀었는데 해설하려고하니 갑자기 어떻게 이렇게썻는지 헷갈리기시작한다..
+
+8.같은 숫자는 싫어.
+```python
+def solution(arr):
+    answer = []
+    for i in range(len(arr)):
+        if i == 0:
+            answer.append(arr[i])
+        elif arr[i] !=arr[i-1]:
+            answer.append(arr[i])
+        return answer
+```
+arr= [1,1,3,3,0,1,1]	
+answer=[1,3,0,1]
+같은 숫자를 제거하되 앞에있는숫자와 다르다면 출력해준다. 맨처음에는 i+1로 접근했다가 마지막 집합체를 구분짓지않고 끝내서 생각의 방식을 바꾸었다.
+
+9.실패율
+```python
+N=5
+stages=[2, 1, 2, 6, 2, 4, 3, 3]	
+result=[3,4,2,1,5]
+# n단계 실패율 구하기 = n/range(len(stages))
+#result= 실패율 높은 n단계부터 낮은 n단계까지 나열 (내림차순)
+stages.sort() #오름차순
+print(stages) #[1, 2, 2, 2, 3, 3, 4, 6]
+# 1단계는 1/8 2단계는 3/7 3단계는 2/4 4단계는 1/2 5단계는 0/1
+A=0
+for i in range(len(stages)):
+    # print(range(len(stages))) #총길이 8
+    if  7 >= i >= 0:
+        A +=stages.count(i+1)
+        # print(A)
+        print(stages.count(i+1)/(len(stages)))
+    # elif 7 >= i >= 1:
+        # A +=stages.count(i+1)
+        # print(len(stages)-A)
+        # print(stages.count(i+1)/(len(stages)-A))   
+    elif A == 8:
+        break
+        # A +=stages.count(i+1)
+        # print(stages.count(i+1)/(len(stages)-A))
+    # elif A == 8:
+    #     break
+
+```
+못풀었다. 하나씩 print했음에도 불구하고 분명 조금만 손보면 될거같은데 A가 8이되면 멈추게했음에도 불구하고 계속 분모가 0인 에러가 나오게된다.

@@ -2,12 +2,14 @@ d=[1,3,2,5,4]
 d.sort
 budget=9
 def solution(d, budget):
+    answer=0
     for i in range(len(d)+1):
         if budget > d[i]: 
             budget -= d[i]
+            answer +=1
         else:
-            return i+1
-    return budget
+            break
+    return answer
 
 
 
