@@ -5,13 +5,12 @@ commands=[[2, 5, 3], [4, 4, 1], [1, 7, 3]]
 answer=[]
 for i in commands:
     print(i)
-    print(array[i])
+    # print(array[i])
     A=array[i[0]-1:i[1]]
     print(A)
     A.sort()
     print(A)
-        # print(A)
-        # print(A[commands[2]-1])
+    # print(A[commands[2]-1])
     answer.append(A[i[2]-1])
     print(answer)
         # return answer

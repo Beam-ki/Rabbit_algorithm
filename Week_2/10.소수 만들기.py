@@ -6,3 +6,4 @@ def is_prime_number(num):
             if num % n == 0:
                 return False        
         return True
+

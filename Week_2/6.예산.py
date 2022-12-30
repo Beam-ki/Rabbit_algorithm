@@ -10,15 +10,5 @@ def solution(d, budget):
         else:
             break
     return answer
-
-
-
-
-
-
-
-
-
-print(solution(d,budget))
 #최대한 많은 부서에게 지원해준다
 #
